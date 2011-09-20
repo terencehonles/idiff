@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1052.3622"
+   height="600"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="carousel-mock.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="EmptyTriangleOutL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="EmptyTriangleOutL"
+       style="overflow:visible">
+      <path
+         id="path3974"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="matrix(0.8,0,0,0.8,-4.8,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.43527528"
+     inkscape:cx="406.22742"
+     inkscape:cy="372.85035"
+     inkscape:document-units="px"
+     inkscape:current-layer="max"
+     showgrid="false"
+     inkscape:window-width="1110"
+     inkscape:window-height="625"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="min"
+     style="display:inline"
+     transform="translate(0,-144.09494)">
+    <g
+       id="min"
+       inkscape:label="#g5620">
+      <rect
+         y="670.36243"
+         x="4.3348848e-08"
+         height="73.732018"
+         width="1051.7357"
+         id="rect5017"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.8783834;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         onmouseover="max()" />
+      <rect
+         y="678.18542"
+         x="9.090909"
+         height="59.090881"
+         width="85.59539"
+         id="rect5019"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5021"
+         y="712.65784"
+         x="44.619717"
+         style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           y="712.65784"
+           x="44.619717"
+           id="tspan5023"
+           sodipodi:role="line">1</tspan></text>
+      <rect
+         y="679.89728"
+         x="105.04225"
+         height="57.74651"
+         width="84.507042"
+         id="rect5025"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5027"
+         y="712.65784"
+         x="142.61972"
+         style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           y="712.65784"
+           x="142.61972"
+           id="tspan5029"
+           sodipodi:role="line">2</tspan></text>
+      <rect
+         y="682.41705"
+         x="199.6129"
+         height="124.19355"
+         width="844.44177"
+         id="rect5031"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.00682282;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <g
+         id="g5039">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect5037"
+           width="374.07407"
+           height="53.703705"
+           x="433.33334"
+           y="558.9093" />
+        <text
+           xml:space="preserve"
+           style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           x="450.00003"
+           y="590.39081"
+           id="text5033"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan5035"
+             x="450.00003"
+             y="590.39081">Only the top of the carousel is visible</tspan></text>
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path5044"
+         d="m 618.51852,610.76115 0,72.22222"
+         style="fill:none;stroke:#ff0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#EmptyTriangleOutL)" />
+      <g
+         id="g5244">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect5238"
+           width="209.25926"
+           height="111.11111"
+           x="9.2592592"
+           y="520.02039" />
+        <text
+           xml:space="preserve"
+           style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           x="22.222221"
+           y="545.94635"
+           id="text5228"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan5230"
+             x="22.222221"
+             y="545.94635">Thumnails shrunk</tspan><tspan
+             sodipodi:role="line"
+             x="22.222221"
+             y="568.44635"
+             id="tspan5232">and were reordered</tspan><tspan
+             sodipodi:role="line"
+             x="22.222221"
+             y="590.94635"
+             id="tspan5234">so they remain fully</tspan><tspan
+             sodipodi:role="line"
+             x="22.222221"
+             y="613.44635"
+             id="tspan5236">visible</tspan></text>
+      </g>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path5252"
+         d="m 109.25926,631.13152 c 0,38.88889 -61.8266,-11.23738 -61.111112,44.44444"
+         style="fill:none;stroke:#0000ff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#EmptyTriangleOutL)" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path5436"
+         d="m 109.25926,631.13152 c -0.42088,37.5 37.03704,-4.96634 37.03704,48.14815"
+         style="fill:none;stroke:#0000ff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#EmptyTriangleOutL)" />
+    </g>
+  </g>
+  <g
+     inkscape:label="max"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-452.36269)"
+     style="display:inline">
+    <g
+       id="max"
+       inkscape:label="#g5644">
+      <rect
+         transform="translate(0,308.2677)"
+         y="555.52307"
+         x="0"
+         height="188.57143"
+         width="1051.4286"
+         id="rect2985"
+         style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <rect
+         y="884.12012"
+         x="19.562815"
+         height="65.752426"
+         width="126.72803"
+         id="rect3755"
+         style="fill:none;stroke:#000000;stroke-width:2.10123801;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3757"
+         y="922.65485"
+         x="27.268291"
+         style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           y="922.65485"
+           x="27.268291"
+           id="tspan3759"
+           sodipodi:role="line">Thumbnail 1</tspan></text>
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:2.10123801;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="rect3761"
+         width="126.72803"
+         height="65.752426"
+         x="19.562815"
+         y="964.12012" />
+      <text
+         xml:space="preserve"
+         style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="27.268291"
+         y="1002.6548"
+         id="text3763"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3765"
+           x="27.268291"
+           y="1002.6548">Thumbnail 2</tspan></text>
+      <rect
+         transform="translate(0,308.2677)"
+         y="578.24084"
+         x="163.41463"
+         height="143.9024"
+         width="868.29266"
+         id="rect3767"
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <flowRoot
+         transform="translate(33.259423,304.05484)"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+         id="flowRoot3769"
+         xml:space="preserve"><flowRegion
+           id="flowRegion3771"><rect
+             style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Sans;-inkscape-font-specification:Sans"
+             y="627.0213"
+             x="292.68292"
+             height="92.202553"
+             width="583.2594"
+             id="rect3773" /></flowRegion><flowPara
+           id="flowPara3777"
+           style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Sans;-inkscape-font-specification:Sans">Carousel of images in the selected directoriies</flowPara><flowPara
+           id="flowPara3779"
+           style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Sans;-inkscape-font-specification:Sans">(organized by time or name)</flowPara></flowRoot>      <g
+         style="stroke:#ff0000;stroke-opacity:1"
+         id="g4438">
+        <g
+           style="stroke:#ff0000;stroke-opacity:1"
+           id="g3801">
+          <rect
+             transform="translate(0,308.2677)"
+             y="407.92426"
+             x="38.297871"
+             height="91.489365"
+             width="278.72342"
+             id="rect3799"
+             style="fill:#ffffff;stroke:#ff0000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3791"
+             y="741.72388"
+             x="53.19149"
+             style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               y="741.72388"
+               x="53.19149"
+               id="tspan3793"
+               sodipodi:role="line">Clicking on the thumbnails</tspan><tspan
+               id="tspan3795"
+               y="764.22388"
+               x="53.19149"
+               sodipodi:role="line">will spin the carousel to the</tspan><tspan
+               id="tspan3797"
+               y="786.72388"
+               x="53.19149"
+               sodipodi:role="line">image in the thumbnail</tspan></text>
+        </g>
+        <path
+           style="fill:none;stroke:#ff0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#EmptyTriangleOutL)"
+           d="m 172.34043,499.41363 c -36.17022,36.17021 -108.220507,0.0967 -110.638302,74.46809"
+           id="path3808"
+           inkscape:connector-curvature="0"
+           transform="translate(0,308.2677)"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="fill:none;stroke:#ff0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#EmptyTriangleOutL)"
+           d="m 171.21212,498.63994 c -13.27445,77.12248 68.32592,186.81617 -24.24242,192.42424"
+           id="path4254"
+           inkscape:connector-curvature="0"
+           transform="translate(0,308.2677)"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <g
+         id="g4755">
+        <g
+           id="g4561">
+          <rect
+             y="648.90173"
+             x="365.50507"
+             height="168.98984"
+             width="317.26572"
+             id="rect4559"
+             style="fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:1.97566652;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text4545"
+             y="681.67255"
+             x="381.03448"
+             style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               y="681.67255"
+               x="381.03448"
+               id="tspan4547"
+               sodipodi:role="line">Bottom view is automatically</tspan><tspan
+               id="tspan4549"
+               y="704.17255"
+               x="381.03448"
+               sodipodi:role="line">minimized when the mouse is</tspan><tspan
+               id="tspan4551"
+               y="726.67255"
+               x="381.03448"
+               sodipodi:role="line">sufficiently far away</tspan><tspan
+               id="tspan4553"
+               y="749.17255"
+               x="381.03448"
+               sodipodi:role="line">(50% of the height)</tspan><tspan
+               id="tspan4555"
+               y="771.67255"
+               x="381.03448"
+               sodipodi:role="line">and maximized when it is over</tspan><tspan
+               id="tspan4557"
+               y="794.17255"
+               x="381.03448"
+               sodipodi:role="line">the minimized version</tspan></text>
+        </g>
+        <path
+           style="fill:none;stroke:#0000ff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#EmptyTriangleOutL)"
+           d="m 517.24138,509.61172 0,46.55173"
+           id="path4571"
+           inkscape:connector-curvature="0"
+           transform="translate(0,308.2677)" />
+      </g>
+      <g
+         id="g4984">
+        <g
+           id="g4794">
+          <rect
+             y="679.11041"
+             x="800"
+             height="83.596573"
+             width="237.93103"
+             id="rect4792"
+             style="fill:#ffffff;fill-opacity:1;stroke:#ff00ff;stroke-width:2.25915694;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text4786"
+             y="703.81049"
+             x="817.24139"
+             style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             xml:space="preserve"><tspan
+               y="703.81049"
+               x="817.24139"
+               id="tspan4788"
+               sodipodi:role="line">Minimize logo</tspan><tspan
+               id="tspan4992"
+               y="726.31049"
+               x="817.24139"
+               sodipodi:role="line">(for non mouse)</tspan><tspan
+               id="tspan4790"
+               y="748.81049"
+               x="817.24139"
+               sodipodi:role="line">and add directory logo</tspan></text>
+        </g>
+        <path
+           style="fill:none;stroke:#ff00ff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#EmptyTriangleOutL)"
+           d="m 906.89655,452.71517 c -1.72414,87.93103 99.99995,13.7931 98.27585,100"
+           id="path4800"
+           inkscape:connector-curvature="0"
+           transform="translate(0,308.2677)"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <rect
+         style="fill:#ffffff;fill-opacity:0.00483093;stroke:#0000ff;stroke-width:2;stroke-miterlimit:4;stroke-opacity:0.58937198;stroke-dasharray:6, 2;stroke-dashoffset:0"
+         id="rect3219"
+         width="1057.9441"
+         height="293.87338"
+         x="-3.4573338"
+         y="450.2211"
+         transform="translate(0,308.2677)"
+         onmouseout="min()" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="notes"
+     style="display:inline"
+     transform="translate(0,-144.09494)">
+    <g
+       style="display:inline"
+       id="g4514"
+       transform="translate(-310.52632,-538.79402)">
+      <rect
+         y="714.4834"
+         x="342.42426"
+         height="133.33333"
+         width="308.57574"
+         id="rect4512"
+         style="fill:#ffffff;fill-opacity:1;stroke:#00ff00;stroke-width:1.96490538;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4500"
+         y="738.72577"
+         x="356.06061"
+         style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           y="738.72577"
+           x="356.06061"
+           id="tspan4502"
+           sodipodi:role="line">Dragging from the carousel</tspan><tspan
+           id="tspan4504"
+           y="761.22577"
+           x="356.06061"
+           sodipodi:role="line">to the thumbnails, or to an</tspan><tspan
+           id="tspan4506"
+           y="783.72577"
+           x="356.06061"
+           sodipodi:role="line">image in the 2 up view</tspan><tspan
+           id="tspan4508"
+           y="806.22577"
+           x="356.06061"
+           sodipodi:role="line">causes that image to be loaded</tspan><tspan
+           id="tspan4510"
+           y="828.72577"
+           x="356.06061"
+           sodipodi:role="line">as on of the diffed images</tspan></text>
+    </g>
+    <g
+       transform="translate(0,-178.2677)"
+       style="display:inline"
+       id="g4535">
+      <rect
+         y="354.01065"
+         x="370.61398"
+         height="110.49618"
+         width="367.39273"
+         id="rect4533"
+         style="fill:#ffffff;fill-opacity:1;stroke:#00ff00;stroke-width:1.84864771;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         transform="translate(0,308.2677)"
+         sodipodi:linespacing="125%"
+         id="text4523"
+         y="73.041847"
+         x="386.8421"
+         style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           y="73.041847"
+           x="386.8421"
+           id="tspan4525"
+           sodipodi:role="line">Images  which are selected</tspan><tspan
+           id="tspan4527"
+           y="95.541847"
+           x="386.8421"
+           sodipodi:role="line">are displayed in the thumbnails</tspan><tspan
+           id="tspan4529"
+           y="118.04185"
+           x="386.8421"
+           sodipodi:role="line">on the right, but also are highlighted</tspan><tspan
+           id="tspan4531"
+           y="140.54184"
+           x="386.8421"
+           sodipodi:role="line">in the carousel</tspan></text>
+    </g>
+  </g>
+  <script
+     id="script6221">//
+var minimized = document.getElementById('min'),
+    maximized = document.getElementById('max');
+
+function min() {
+    minimized.style.display = '';
+    maximized.style.display = 'none';
+}
+
+function max() {
+    minimized.style.display = 'none';
+    maximized.style.display = '';
+}
+
+min();
+//</script>
+</svg>
