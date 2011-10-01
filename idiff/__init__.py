@@ -5,6 +5,7 @@ from PySide import QtGui as gui
 import logging
 
 from views import Window
+from controls import message_box
 
 
 class Application(gui.QApplication):
@@ -88,15 +89,18 @@ class Application(gui.QApplication):
 
             # ask the user if they want to quit
             if not selected:
-                message = gui.QMessageBox()
+                message = gui.QMessageBox
                 _ = self.tr
-                message.setIcon(message.Question)
-                message.setText(_('You did not select any files'))
-                message.setInformativeText(_('Did you want to quit?'))
-                message.setWindowTitle(_('Did you want to quit?'))
-                message.setStandardButtons(message.Yes | message.No)
-                message.setDefaultButton(message.Yes)
-                answer = message.exec_()
+                question = _('Did you want to quit?')
+                answer = message_box(
+                    parent=None,
+                    title=question,
+                    text=_('You did not select any files'),
+                    info=question,
+                    icon=message.Question,
+                    buttons=message.Yes | message.No,
+                    default=message.Yes
+                ).exec_()
 
                 # yes or application quit
                 if answer != message.No: return None

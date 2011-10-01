@@ -4,53 +4,72 @@
 from PySide import QtCore as core, QtGui as gui
 from collections import OrderedDict
 
-from idiff.controls import Viewport
+from idiff.controls import MAX_ZOOM, MIN_ZOOM, message_box, CompositeImage, \
+                           Viewport
 
-BACKGROUND_COLOR = gui.QColor(0x99, 0x99, 0x99)
+import os
+import sys
+
+BACKGROUND_COLOR = gui.QColor(0x999999)
+SLIDER_MULTIPLIER = 100.0
 
 
-class SideBySideView(gui.QWidget):
+class View(gui.QWidget):
     BACKGROUND_BRUSH = gui.QBrush(BACKGROUND_COLOR)
 
     @classmethod
-    def _init_viewport(cls, filename):
+    def _init_viewport(cls, image):
+        'creates a viewport which contains the specified image'
+
         viewport = Viewport()
         viewport.setBackgroundBrush(cls.BACKGROUND_BRUSH)
 
-        pixmap = gui.QPixmap(filename)
+        pixmap = gui.QPixmap(image)
         scene = gui.QGraphicsScene(pixmap.rect(), viewport)
         scene.addPixmap(pixmap)
         viewport.setScene(scene)
 
         return viewport
 
-    def __init__(self, filenames, parent=None):
-        super(SideBySideView, self).__init__(parent)
+    def _link_viewport(self):
+        'links the viewport to the slider'
 
-        layout = gui.QHBoxLayout()
-        self.setLayout(layout)
+        slider = self.zoom_slider
+        viewport = self.viewport
 
-        self.viewports = viewports = []
-        for filename in filenames:
-            viewport = self._init_viewport(filename)
-            layout.addWidget(viewport)
-            viewports.append(viewport)
+        def slide():
+            viewport.zoom = slider.value() / SLIDER_MULTIPLIER
 
-        self._link_viewports()
+        def viewport_changed():
+            # don't create an update loop
+            slider.blockSignals(True)
+            slider.setValue(viewport.zoom * 100)
+            slider.blockSignals(False)
+
+        slider.valueChanged.connect(slide)
+        viewport.viewport_change.connect(viewport_changed)
+
+    def __init__(self, zoom_slider, parent=None):
+        super(View, self).__init__(parent)
+        self.zoom_slider = zoom_slider
+
+    def showEvent(self, event):
+        self.viewport.zoom = self.zoom_slider.value() / SLIDER_MULTIPLIER
+        super(View, self).showEvent(event)
+
+
+class SideBySideView(View):
+    'show images side by side with linked zoom and panning'
 
     def _link_viewports(self):
         'links the viewport controls to their viewport actions'
 
-        slider = self.parentWidget().slider
-        max_width = max(self.viewports, key=lambda x: x.sceneRect().width())
-        max_height = max(self.viewports, key=lambda x: x.sceneRect().height())
-
-        slider.setRange(max_width.min_zoom * 100, max_width.max_zoom * 100)
-
+        slider = self.zoom_slider
         def slide():
-            max_width.zoom = slider.value() / 100.0
-            self._update_zoom(max_width)
-            self._update_offset(max_width)
+            source = self.viewports[0]
+            source.zoom = slider.value() / SLIDER_MULTIPLIER
+            self._update_zoom(source)
+            self._update_offset(source)
 
         def viewport_changed(source):
             def update():
@@ -90,40 +109,47 @@ class SideBySideView(gui.QWidget):
         for viewport in self.viewports:
             if viewport is not source: viewport.zoom = zoom
 
-
-class SliceView(gui.QWidget):
-    def __init__(self, images, parent=None):
-        super(SliceView, self).__init__(parent)
-
+    def __init__(self, images, zoom_slider, parent=None):
+        super(SideBySideView, self).__init__(zoom_slider, parent)
         layout = gui.QHBoxLayout()
         self.setLayout(layout)
-        self.large_shadow = gui.QGraphicsDropShadowEffect(self)
 
-        for image in images[:1]:
-            pixmap = gui.QPixmap(image)
-            image = gui.QLabel()
-            image.setPixmap(pixmap)
-            layout.addWidget(image)
+        self.viewports = [self._init_viewport(image) for image in images]
+        for viewport in self.viewports: layout.addWidget(viewport)
+        self._link_viewports()
+
+    def showEvent(self, event):
+        source = self.viewports[0]
+        source.zoom = self.zoom_slider.value() / SLIDER_MULTIPLIER
+        self._update_zoom(source)
+        self._update_offset(source)
+        super(View, self).showEvent(event)
 
 
-class MergedView(gui.QWidget):
-    def __init__(self, images, parent=None):
-        from subprocess import check_output
-
-        super(MergedView, self).__init__(parent)
-
+class SliceView(View):
+    def __init__(self, images, zoom_slider, parent=None):
+        super(SliceView, self).__init__(zoom_slider, parent)
         layout = gui.QHBoxLayout()
         self.setLayout(layout)
-        self.large_shadow = gui.QGraphicsDropShadowEffect(self)
 
-        output = check_output(['compare', '-highlight-color', 'blue',
-                               '-fuzz', '2%'] + images[:2] + ['-'])
-        data = core.QByteArray.fromRawData(output)
-        pixmap = gui.QPixmap()
-        pixmap.loadFromData(data)
-        image = gui.QLabel()
-        image.setPixmap(pixmap)
-        layout.addWidget(image)
+        painter = gui.QPainter
+        composite = CompositeImage(painter.CompositionMode_Multiply, *images)
+        self.viewport = self._init_viewport(composite)
+        layout.addWidget(self.viewport)
+        self._link_viewport()
+
+
+class MergedView(View):
+    def __init__(self, images, zoom_slider, parent=None):
+        super(MergedView, self).__init__(zoom_slider, parent)
+        layout = gui.QHBoxLayout()
+        self.setLayout(layout)
+
+        painter = gui.QPainter
+        composite = CompositeImage(painter.CompositionMode_Difference, *images)
+        self.viewport = self._init_viewport(composite)
+        layout.addWidget(self.viewport)
+        self._link_viewport()
 
 
 class Window(gui.QMainWindow):
@@ -137,40 +163,6 @@ class Window(gui.QMainWindow):
     DEFAULT_VIEW = VIEWS.keys()[0]
 
 
-    def _init_controls(self):
-        'builds the controls'
-
-        controls = gui.QWidget()
-        controls_layout = gui.QHBoxLayout()
-        controls.setLayout(controls_layout)
-
-        self.controls = {}
-        for name in self.VIEWS.keys():
-            self.controls[name] = button = gui.QPushButton(name)
-            controls_layout.addWidget(button)
-
-        self.slider = slider = gui.QSlider(core.Qt.Orientation.Horizontal)
-        controls_layout.addWidget(slider)
-
-        return controls
-
-
-    def _init_views(self, images):
-        'builds the views'
-
-        self.view_layout = view_layout = gui.QStackedLayout()
-        view_container = gui.QWidget()
-        view_container.setLayout(view_layout)
-
-        # add the different views
-        self.views = {}
-        for name, view in self.VIEWS.items():
-            self.views[name] = widget = view(images, self)
-            view_layout.addWidget(widget)
-
-        return view_container
-
-
     def _bind_controls(self):
         'binds the controls to the show view method'
 
@@ -180,8 +172,87 @@ class Window(gui.QMainWindow):
         for name in self.VIEWS.keys():
             self.controls[name].clicked.connect(select_view(name))
 
+        # TODO: we need to pick which image is considered the "main" image
+        max_width = max(self.images, key=lambda x: x.width())
+        max_height = max(self.images, key=lambda x: x.height())
+        self.slider.setRange(MIN_ZOOM * SLIDER_MULTIPLIER,
+                             MAX_ZOOM * SLIDER_MULTIPLIER)
+        self.slider.setValue(1)
 
-    def __init__(self, images, options, parent=None):
+    def _init_controls(self):
+        'builds the controls'
+
+        controls = gui.QWidget()
+        controls_layout = gui.QHBoxLayout()
+        controls.setLayout(controls_layout)
+
+        self.controls = {}
+        for name in self.VIEWS.keys():
+            # TODO: change these to custom buttons
+            self.controls[name] = button = gui.QPushButton(name)
+            controls_layout.addWidget(button)
+
+        self.slider = slider = gui.QSlider(core.Qt.Orientation.Horizontal)
+        controls_layout.addWidget(slider)
+
+        return controls
+
+    def _init_views(self, filenames):
+        'builds the views'
+
+        self.view_layout = view_layout = gui.QStackedLayout()
+        view_container = gui.QWidget()
+        view_container.setLayout(view_layout)
+
+        # add the different views
+        self.images = images = list(self._load_images(filenames))
+        self.views = {}
+        for name, view in self.VIEWS.items():
+            self.views[name] = widget = view(images, self.slider, self)
+            view_layout.addWidget(widget)
+
+        return view_container
+
+    def _load_image_fallback(self, filename):
+        from StringIO import StringIO
+
+        def error(info):
+            _ = self.tr
+            message_box(parent=self, title=_('Image not recognized'),
+                        text=_('Image "%s" not recognized.')
+                            % os.path.basename(filename),
+                        info=_(info),
+                        icon=gui.QMessageBox.Critical).exec_()
+
+            # this doesn't work because we haven't called exec_ on the
+            # application yet
+            # core.QCoreApplication.exit(1)
+            sys.exit(1)
+
+        try: import Image
+        except ImportError:
+            error('PIL was also not found when trying to convert it')
+            return
+
+        try:
+            buffer = StringIO()
+            Image.open(filename).save(buffer, 'png')
+            buffer.seek(0)
+
+            array = core.QByteArray.fromRawData(buffer.read())
+            return gui.QImage.fromData(array)
+        except IOError:
+            error('PIL could not convert the image to a suitable format')
+
+    def _load_images(self, filenames):
+        for filename in filenames:
+            image = gui.QImage(filename)
+            if image.isNull():
+                image = self._load_image_fallback(filename)
+
+            yield image
+
+    def __init__(self, filenames, options, parent=None):
         'creates the different views and moves to the specified view'
 
         super(Window, self).__init__(parent)
@@ -196,12 +267,11 @@ class Window(gui.QMainWindow):
         self.setCentralWidget(widget)
 
         widget_layout.addWidget(self._init_controls())
-        widget_layout.addWidget(self._init_views(images))
+        widget_layout.addWidget(self._init_views(filenames))
         self._bind_controls()
 
         # make the selected view visible
         self.select_view(options.view) or self.select_view(self.DEFAULT_VIEW)
-
 
     def select_view(self, view):
         'changes the selected view by name'
